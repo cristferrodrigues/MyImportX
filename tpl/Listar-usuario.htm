@@ -1,0 +1,80 @@
+﻿<div class="container">
+            <div class="row">
+<h2>Lista Usuário</h2>
+
+<br/>
+
+<a href="../php/cadastro-usuario.php" class="btn btn-primary btn-rounded">Cadastrar usuário</a>
+
+<br/>
+
+<br/>
+
+
+
+<table id="dyntable" class="table table-bordered">
+
+    <colgroup>
+
+        <col class="con0" style="align: center; width: 50%" />
+
+        <col class="con1" />
+
+        <col class="con0" />
+
+        <col class="con1" />
+
+        <col class="con0" />
+
+        <col class="con1" />
+
+    </colgroup>
+
+    <thead>
+
+        <tr>
+
+            <th class="head0">Nome</th>
+
+            <th class="head0">E-Mail</th>
+
+            <th class="head0">Login</th>
+
+            <th class="head1">Ação</th>
+
+            
+
+        </tr>
+
+    </thead>
+
+    <tbody>
+
+     <!-- START BLOCK : usuario --> 
+
+        <tr id="{cod}" class="gradeA">
+
+            <td>{nom}</td>
+
+            <td>{ema}</td>
+
+            <td>{login}</td>
+
+            <td  class="centeralign">
+
+            <a href="#" id="deleteuser" class="deleteuser"><span class="icon-remove"></span></a>
+
+            <a href="../php/atualizar-usuario.php?id={cod}"><span class="icon-pencil"></span></a></td>
+
+            
+
+        </tr>
+
+      <!-- END BLOCK : usuario -->
+
+    </tbody>
+
+</table>
+
+</div>
+</div>

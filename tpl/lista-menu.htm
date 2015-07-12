@@ -1,0 +1,226 @@
+﻿     <div class="container">
+            <div class="row">
+        <h2>Lista Menus</h2>
+
+<br/>
+
+<a href="../php/cadastro-menu.php" class="btn btn-primary btn-rounded">Cadastrar Menus</a>
+
+<br/>
+
+<br/>
+
+   
+
+<table id="dyntable" class="table table-bordered">
+
+    <colgroup>
+
+        <col class="con0" style="align: center; width: 50%" />
+
+        <col class="con1" />
+
+        <col class="con0" />
+
+        <col class="con1" />
+
+        <col class="con0" />
+
+        <col class="con1" />
+
+    </colgroup>
+
+    <thead>
+
+        <tr>
+
+            <th class="head0">Nome</th>
+
+            <th class="head1">Action</th>
+
+            
+
+        </tr>
+
+    </thead>
+
+    <tbody>
+
+     <!-- START BLOCK : menus --> 
+
+        <tr id="{cod}" class="gradeA">
+
+            <td><span class="glyphicon {icone}"></span>&nbsp;{menu}</td>
+
+            <td  class="centeralign">
+
+            <a href="#" id="deleterowmenu" class="deleterowmenu"><span class="icon-remove"></span></a>
+
+            <a href="../php/atualizar-menu.php?id={cod}"><span class="icon-pencil"></span></a>
+
+            <a data-toggle="modal" href="#modalsubmenu" class="listsub"><span class="icon-indent-left"></span></a>
+
+            </td>
+
+            
+
+        </tr>
+
+      <!-- END BLOCK : menus -->
+
+    </tbody>
+
+</table>
+
+</div>
+</div>
+
+
+
+  <div class="modal fade hide" id="modalsubmenu">
+
+    <div class="modal-dialog">
+
+      <div class="modal-content">
+
+        <div class="modal-header">
+
+          <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+
+          <h4 class="modal-title">Submenu</h4>
+
+        </div>
+
+        <div class="modal-body">
+
+					<div id="loaders"></div>
+
+            	 <form action="../php/submenu-exec.php" id="submenuexec" method="post"/>
+
+	              <input type="hidden" name="act" value="inserir"/>                     
+
+                   <input type="hidden" name="idmenu" id="idmenu" value=""/> 
+
+                   <div class="form">
+
+  	      			  <div class="sep">   
+
+                     	 <fieldset>
+
+                         	<legend class="lege glyphicon glyphicon-filter"><span>Cadastro de Submenu</span></legend>
+
+                            
+
+                            
+
+                           <div class="col-lg-3">
+
+                            <label><strong>Icone</strong></label>            
+
+                              <select name="icone" class="selectpicker" data-live-search="true"  data-style="btn-primary" tabindex="1">
+
+                                <option value="glyphicon-th" data-icon="glyphicon-th">glyphicon-th</option>
+
+                                <option value="glyphicon-plus-sign" data-icon="glyphicon-plus-sign">glyphicon-plus-sign</option>
+
+                                <option value="glyphicon-th-list" data-icon="glyphicon-th-list">glyphicon-th-list</option>
+
+                                <option value="glyphicon-list-alt"  data-icon="glyphicon-list-alt">glyphicon-list-alt</option>
+
+                              </select>  
+
+                           </div>
+
+                           <br/>
+
+						   <br/>
+
+						   <br/>
+
+						   <br/>
+
+                            <div class="col-lg-6">
+
+                            	<label><strong>Nome:</strong></label>
+
+                                <div class="input-group">
+
+                                    <span class="input-group-addon glyphicon glyphicon-tasks"></span>
+
+                               	    <input type="text" name="nome" id="nome" required class="form-control"  />
+
+                                 </div>  
+
+                       		</div>
+
+                            
+
+                            <div class="col-lg-6">
+
+                            	<label><strong>Url:</strong></label>
+
+                                <div class="input-group">
+
+                                    <span class="input-group-addon glyphicon glyphicon-link"></span>
+
+                               	    <input type="text" name="link" id="link" required class="form-control"  />
+
+                                 </div>  
+
+                       		</div>   
+
+                        
+
+                     </div> 
+
+                     </fieldset>
+
+                     <p class="stdformbutton" style="padding:10px;">
+
+                       	 <button class="btn btn-primary">Cadastrar</button>
+
+                    	</p>   
+
+                 </div>       
+
+            </form>
+
+   	
+
+          	<table class="table table-striped" id="dyntablecontaspagar">
+
+                <thead>
+
+                  <tr>
+
+                    <th>#</th>
+
+                    <th>Nome</th>
+
+                    <th>Action</th>
+
+                </thead>
+
+                <tbody id="listsubmenu">
+
+                    
+
+                </tbody>
+
+              </table> 	                                                 
+
+              </div>
+
+              
+
+          <div class="modal-footer">
+
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+
+        </div>
+
+      </div><!-- /.modal-content -->
+
+    </div><!-- /.modal-dialog -->
+
+  </div><!-- /.modal -->

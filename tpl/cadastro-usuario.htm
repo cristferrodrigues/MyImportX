@@ -1,0 +1,133 @@
+<div id="dashboard-left" class="span8">
+  <div id="loading"></div>
+    <div class="widgetbox box-inverse">
+        <h4 class="widgettitle">Cadastro de Usuário</h4>
+        <div class="widgetcontent nopadding">
+   			
+            <form class="stdform stdform2" method="post" action="usuario-exec.php" />
+	              <input type="hidden" name="act" value="inserir"/>
+                  <input type="hidden" name="coduser" value="{coduser}"/>       
+                 <div class="form">
+  	      			  <div class="sep">   
+                     	 
+                          <fieldset>
+                         	<legend class="lege glyphicon glyphicon-user"><span>Cadastro de Usuário</span></legend>
+                            	
+                                <div class="col-lg-3">
+                                    <label><strong>Nome:</strong></label>
+                                    <div class="input-group">
+                                        <span class="input-group-addon glyphicon glyphicon-asterisk"></span>
+                                        <input name="nome" type="text" class="form-control" id="nome" required value="" tabindex="1"/>
+                                     </div>  
+                           		</div>
+        						<div class="col-lg-3">
+                                    <label><strong>Email:</strong></label>
+                                    <div class="input-group">
+                                        <span class="input-group-addon glyphicon glyphicon-envelope"></span>
+                                        <input name="email" type="email" class="form-control" required id="email" value="" tabindex="2"/>
+                                     </div>  
+                           		</div>
+								<div class="col-lg-3">
+                                    <label><strong>Login:</strong></label>
+                                    <div class="input-group">
+                                        <span class="input-group-addon glyphicon glyphicon-user"></span>
+                                        <input name="login" type="text" class="form-control" required id="login" value="" tabindex="3"/>
+                                     </div>  
+                           		</div>
+                                <br/>
+								<br/>
+                                <br/>
+                                <br/>
+                                <div class="col-lg-3">
+                                    <label><strong>Senha:</strong></label>
+                                    <div class="input-group">
+                                        <span class="input-group-addon glyphicon glyphicon-lock"></span>
+                                        <input name="senha" type="password" class="form-control" required id="senha" value="" tabindex="4"/>
+                                     </div>  
+                           		</div>
+                                <div class="col-lg-3">
+                                    <label><strong>Confirma Senha:</strong></label>
+                                    <div class="input-group">
+                                        <span class="input-group-addon glyphicon glyphicon-lock"></span>
+                                        <input name="confsenha" type="password" class="form-control" required id="confsenha" value="" data-toggle="popover"  data-placement="top" data-content="As senhas informadas não coincidem!" data-original-title="" tabindex="5"/>
+                                     </div>  
+                           		</div>
+                           </fieldset>
+                           <br/>
+                        <fieldset>
+                       	  <legend class="lege glyphicon glyphicon-user"><span>Permissões do Usuário</span></legend>
+
+						<!--  <table>
+									  <tr>
+									    <td>
+                                        <label>
+									      <input type="checkbox" name="CheckboxGroup1" value="-1" id="CheckboxGroup1_0">
+                                           Todos
+ 									   </label>
+                                        </td>
+						    </tr>
+							<tr>
+                          
+                                <td>
+                                <label>
+                                  <input type="checkbox" name="peruser[]" value="{cod}" id="CheckboxGroup1_1">
+                                  {nom}
+                                </label>
+                               
+                                 <label>
+                                  <input type="checkbox" name="perusers[]" value="{cods}" id="CheckboxGroup">
+                                  {noms}
+                                </label>
+                               
+                              </td>
+                           
+						    </tr>
+                            
+						  </table>-->
+                          <ul class="ul-permi">
+        		
+                                <li> 
+                                <label>
+								     <input type="checkbox" name="todos" value="todos" id="selecionarTodos"/>
+                                      Todos
+ 								 </label>
+                                   <!-- <ul>
+                                        <li>adadas</li>
+                                    </ul>-->
+                                </li>
+                                 <!-- START BLOCK : menus -->
+                                 <li>
+                                 <label>
+                                  <input type="checkbox" name="peruser" class="marcar"  value="{cod}" id="CheckboxGroup1_1">
+                                  {nom}
+                                </label>
+                                    <ul>
+                                     <!-- START BLOCK : submenus -->
+                                        <li>
+                                            <label>
+                                                <input type="checkbox" name="perusers[]" class="marcar"  value="{idmenu},{cods}" id="CheckboxGroup">
+                                                {noms}
+                                            </label>
+                                        </li>
+                                       <!-- END BLOCK : submenus --> 
+                                    </ul>
+                                </li>
+                                 <!-- END BLOCK : menus -->
+                                
+                            </ul>
+                         </fieldset>
+                	  </div>
+              </div>   
+                <p class="stdformbutton">
+                    <button class="btn btn-primary" tabindex="6">Cadastrar</button>
+                    <a href="../php/Listar-usuario.php" class="btn btn-default">Voltar</a>
+                </p>
+              	 
+            </form>
+   
+        </div>
+   </div>
+   
+</div>
+  
+

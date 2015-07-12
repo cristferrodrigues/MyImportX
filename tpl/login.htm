@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br" class="app">
+<head>
+<meta charset="utf-8" />
+<title>:: Projeto final :: </title>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+<link rel="stylesheet" href="../css/app.v1.css" type="text/css" />
+<!--[if lt IE 9]> <script src="../js/html5shiv.js"></script> <script src="js/ie/respond.min.js"></script> <script src="js/ie/excanvas.js"></script> <![endif]-->
+</head>
+<body class="">
+<section id="content" class="m-t-lg wrapper-md animated fadeInUp">
+  <div class="container aside-xl"> <a class="navbar-brand block" href="login.php"><img src="../images/login.jpg"  name="LOGIN" title="LOGIN"/></a>
+    <section class="m-b-lg">
+      <header class="wrapper text-center"> <strong>Login de usuário</strong> </header>
+      <form action="login-exec.php" enctype="multipart/form-data" id="login" method="post">
+        <div class="list-group">
+          <div class="list-group-item">
+            <input type="email" placeholder="Email" name="ema" required class="form-control no-border">
+          </div>
+          <div class="list-group-item">
+            <input type="password" name="sen" placeholder="Senha" required class="form-control no-border">
+          </div>
+        </div>
+		<input type="hidden" name="act" value="login" />
+        <button type="submit" class="btn btn-lg btn-primary btn-block">Entre</button>
+        <!--<div class="text-center m-t m-b"><a href="#"><small>Esqueceu sua senha?</small></a></div>
+        <div class="line line-dashed"></div>
+        <p class="text-muted text-center"><small>Não tem uma conta?</small></p>
+        <a href="#" class="btn btn-lg btn-default btn-block">Criar uma conta</a>-->
+      </form>
+    </section>
+  </div>
+</section>
+<!-- footer -->
+<footer id="footer">
+  <div class="text-center padder">
+    <p> <small><a href="http://www.nfe.fazenda.gov.br/portal/principal.aspx">Portal NF-e</a><br>
+      &copy; 2015</small> </p>     
+  </div>
+</footer>
+<!-- / footer -->
+<!-- Bootstrap -->
+<!-- App -->
+<script src="../js/app.v1.js"></script>
+<script src="../js/app.plugin.js"></script>
+</body>
+</html>

@@ -1,0 +1,250 @@
+<div class="container">
+            <div class="row">
+   			<section>
+            	
+              <div class="sel_arq">
+                  <label>
+                    <input type="radio" name="RadioGroup1" value="1" id="RadioGroup1_0">
+                    Importar XML</label>
+
+                  <label>
+                    <input type="radio" name="RadioGroup1" value="2" id="RadioGroup1_1">
+                    Buscar Chave de acesso</label>
+
+              </div>
+            </section>
+			<section id="por_arquivo" class="hide">
+            <form action="#" enctype="multipart/form-data" method="post" id="upload"/>
+	
+			
+
+                     	 <fieldset>
+
+                         	<legend><span class="icon-cogs"></span>&nbsp;Importar</legend>
+                            								
+                             <div class="input-prepend">
+                                <label for="file_upload">File:</label>
+                                <span class="add-on icon-terminal"></span>
+                                <input type="file" name="file_upload" class="form-control span3" id="file_upload" multiple>
+                             </div>
+							 <p class="stdformbutton">
+    
+    							<input class="btn btn-primary" type="submit" name="submit"  value="Enviar">
+        		                <a  href="../php/admin.php" class="btn">Voltar</a>
+    
+		                    </p>
+	                     </fieldset>
+
+                       
+				
+            	               
+                
+            </form>
+            </section>
+            
+            
+            <section id="por_barras" class="hide">
+            <form action="#" enctype="multipart/form-data" method="post" id="upload2"/>
+	
+			
+
+                     	 <fieldset>
+
+                         	<legend><span class="icon-cogs"></span>&nbsp;Importar</legend>
+                            <div id="msg"></div>
+                             <div class="input-prepend">
+                             	<label>Tipo Manifesto:</label>
+                                <select name="manif">
+                                	<option value="" selected>Informe uma operação</option>
+                                    <option value="210200">Confirmação da Operação</option>
+                                    <option value="210210">Ciência da Operação</option>
+                                    <option value="210220">Desconhecimento da Operação</option>
+                                    <option value="210240">Operação não Realizada</option>
+                                </select>
+                             </div>
+                             <div class="input-prepend">
+                                <label for="file_upload">File:</label>
+                                <span class="add-on icon-terminal"></span>
+                                <input type="text" name="file_upload" class="form-control span3" id="file_upload2" multiple>
+                             </div>
+							 <p class="stdformbutton">
+    
+    							<!--<input class="btn btn-primary" type="submit" id="subimp" name="submit"  value="Enviar">-->
+                                <a  href="#" id="subimp" class="btn btn-primary">Enviar</a>
+        		                <a  href="../php/admin.php" class="btn">Voltar</a>
+    
+		                    </p>
+	                     </fieldset>
+
+            	               
+                
+            </form>
+            </section>
+            
+			<form action="../php/relacionamento-exec.php" method="post" id="relaciona">
+            
+           <!-- <input type="hidden" name="act" value="inserir"/> -->           
+            <section id="nota_dados" class="hide">
+            		<div class="span2"> Numero:<label id="nota_numero"></label>  </div> 
+            		<div class="span2"> Data Emissão:<label id="nota_dtemi"></label>  </div>
+                    <div class="input-prepend">
+                        <label >Cfop:<i class="cf" style="position: absolute;margin-top: 62px;margin-left: -33px;"></i></label>
+                        <span class="add-on icon-terminal"></span>
+                        <input type="text" name="cfop" class="span2" id="cfop"/>
+                    </div>
+                    <div class="input-prepend">
+                        <label >Data Entrada:</label>
+                        <span class="add-on icon-calendar"></span>
+                        <input type="text" name="dtentrada" class="span2" id="dtentrada"/>
+                    </div>
+                    
+            </section>
+   			<section id="for_dados" class="hide">
+            	 <fieldset>
+
+                   	<legend><span class="icon-user"></span>&nbsp;Dados Fornecedor</legend>
+                    <div class="span3"> Nome:<label id="for_nome"></label>  </div>    
+                    <div class="span3">Endereço: <label id="for_endereco"></label></div>     
+                    <div class="span3">Cidade: <label id="for_cidade"></label></div>
+                    <div class="span3">Estado:<label id="for_estado"></label></div>
+                    <div class="span3">Cnpj / Cpf: <label id="for_cnpjcpf"></label></div>
+                      
+                </fieldset>
+                 
+                 <fieldset>
+
+                   	<legend><span class="icon-list"></span>&nbsp;Produtos a relacionar</legend>
+                 	<table id="dyntable" class="table table-bordered">
+
+   
+
+                    <thead>
+                
+                        <tr>
+                
+                            <th >Codigo</th>
+                            <th >Descrição</th>
+                            <th >QTD</th>
+                            <th >Valor Unitario</th>
+                            <th >cfop</th>
+                            <th>Relacionar</th>
+                       </tr>
+                
+                    </thead>
+                
+                    <tbody>
+                
+                    
+                
+                    </tbody>
+                
+                </table>
+                    	
+                 </fieldset>  
+                 
+                 
+                 
+ 			
+            </section>
+            
+            <section id="total_dados" class="hide">
+            		<div class="span2"> Total da nota:<label id="totalnota"></label>  </div> 
+                    <br/>
+                    <br/>
+            </section>
+            <section id="btnaction" class="hide">
+            
+            	<p class="stdformbutton">   
+                <input class="btn btn-primary" type="submit" name="submit" value="Salvar">
+                </p>
+            
+            </section>
+            
+			</form>
+        </div>
+
+   </div>
+
+<div id="apropria" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+ <!--<form id="frmapropriacao" method="post">-->
+ <div class="modal-header">
+    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+    <h3 id="myModalLabel">Apropriação Despeças/Custos</h3>
+  </div>
+  <div class="modal-body">
+    
+    <fieldset>
+    	<legend><span class="icon-list"></span>&nbsp;Dados da nota</legend>
+        
+        <div class="span3"> Nome:<label id="for_nomes"></label>  </div>
+        <div class="span3"> Nota Fiscal:<label  id="nota_numeros"></label>  </div>
+        <div class="span3"> Emissão:<label  id="dt_emissao"></label>  </div>  	
+        <div class="span3"> Valor R$:<label id="valor_tot"></label>  </div> 
+          <input type="hidden" id="valor_tots" value="0"/>
+    </fieldset>
+   
+    <fieldset>
+    	<legend><span class="icon-list"></span>&nbsp;Formulario</legend>
+   		<input type="hidden" id="cfor" name="cfor"/>
+        <div class="input-prepend">
+            <label><strong>Valor:</strong></label>
+            <span class="add-on icon-dollar"></span>
+            <input type="text" name="valor" id="vl" required class="span2"  />
+        </div>
+       
+		<div class="input-prepend">
+            <label><strong>Centro:</strong></label>
+            <span class="add-on icon-search"></span>
+            <input type="text" name="centro" id="centro" onKeyPress="buscacentro();" required class="span2"  />
+			<input type="hidden" id="xcentro"/>	           
+            
+        </div>
+        
+        <div class="input-prepend">
+            <label><strong>Contas:</strong></label>
+            <span class="add-on icon-search"></span>
+            <input type="text" name="conta" id="conta" onKeyPress="buscafinanccentro();" required class="span2"  />
+            <input type="hidden" id="xconta"/>
+        </div>
+        
+        <div class="input-prepend">
+        <span>Ação:</span>
+         <div class="input-group">  
+       	   <div class="btn-group">
+       	   <button type="submit" class="btn btn-success" id="apm"><span class="icon-plus"></span></button>
+       	   <button type="submit" onClick="deletar();" class="btn btn-danger"><span class="icon-minus"></span></button>                       
+      	  </div>
+        </div> 
+      </div>  
+        
+        <table id="dtapropria" class="table table-bordered">
+            <thead>
+        
+                <tr>
+			        <th><div align="center"><input type="checkbox" class="checkall" id="selecionarTodosbox" /></div></th>
+                    <th>Centro Custo</th>
+                    <th>Conta</th>
+                    <th>R$ Total</th>
+                   
+               </tr>
+        
+            </thead>
+        
+            <tbody>
+        
+				            
+        
+            </tbody>
+        
+        </table>
+        	<input type="hidden" id="valortotal" value="0"/>
+           	<label id="subtotal" style="text-align:right;"></label>		
+    </fieldset>
+    
+  </div>
+  <div class="modal-footer">
+    <!--<button class="btn" data-dismiss="modal" aria-hidden="true">Close</button>-->
+    <button class="btn btn-primary" id="sv">Salvar</button>
+  </div>
+<!--</form>-->
+</div>

@@ -1,0 +1,68 @@
+﻿@charset "utf-8";
+/* CSS Document */
+.menuadm {
+	width: auto;
+	text-align: center;
+	font-size: 12px;/*background: #FFF;*/
+}
+.menuadm a {
+	width: 80px;
+	height: 81px;
+	display: inline-block;
+	padding: 2px;
+	text-align: center;
+	background: url(../images/menuadm.png) top center no-repeat;
+	text-outline:none;
+}
+.menuadm div img {
+	margin: 4px 0 0 0;
+}
+.menuadm div {
+	padding: 5px;
+	width: 84px;
+	/*height: 84px;*/
+}
+.menuadm td img {
+	margin: 4px 0 0 0;
+}
+.menuadm td {
+	padding: 5px;
+	width: 84px;
+	height: 84px;
+}
+.menuadm a:hover {
+	background-position: bottom center;
+	font-weight: bold;
+}
+.mme {
+	width: 18.75em;
+	height: 13.75em;
+	margin: 0px auto;
+	
+}
+.round {
+	border-radius: 0.3125em; /* 5/16 */
+	-moz-border-radius: 0.3125em; /* 5/16 */
+	-webkit-border-radius: 0.3125em; /* 5/16 */
+}
+.fl {
+	/*display:inline-block;*/
+	float:left;
+}
+.fl .txtp {
+	position: absolute;
+	margin: 11px 2px 0px -39px;
+	padding: 3px;
+	color: #FFF;
+	text-shadow: 1px 1px 0 #2a2e36;
+	background: rgb(35, 99, 182);
+	width: 72px;
+	border-radius: 11px;
+}
+
+.flb{
+
+	position: relative;
+	float: left;
+	margin-bottom: 1em;
+}
